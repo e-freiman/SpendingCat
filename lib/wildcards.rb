@@ -1,0 +1,20 @@
+CAT_BY_DESCRIPTION_OVERRIDE = {
+  'Groceries' => ['7.?ELEVEN', 'SAVE ON FOODS', 'SAFEWAY', 'COSTCO WHOLESALE', 'NO FRILLS', 'PROVANT', 'SUPERMARKET', 'THRIFTY',
+                  'URBAN FARE', 'WAL.?MART', 'SUPERSTORE'],
+  'Restaurant' => ['SUSHI', 'CAFE', 'CAFFE', 'COFFEE', 'RESTAURAN', 'KAFFI', 'TIM HORTONS', 'TACOFINO', 'BREKA BAKERY',
+                   'STARBUCKS', 'JJ BEAN', 'THIERRY', 'POKE', 'GRILL', 'BEAN', 'WAFFLE', 'SCHNITZEL', 'BAKERY', 'GELATO',
+                   'CAZBA', 'BREAD', 'CHOCOLAT', 'EARLS', 'WRAPS', 'FAMOUS PLAYER', 'FALAFEL', 'MILLS', 'FRESHII', 'PIZZA',
+                   'FRIED', 'HANDMADE', 'BREWHOUSE', 'GSTRONOMIA', 'TEA', 'MEATS', 'BISTRO', 'JAPAN', 'CATERING',
+                   'LITTLE DONKEY', 'MARKET', 'MCDONALD', 'BAR', 'BENITO', 'TAVERNA', 'OLIVE GARDEN', 'OPA', 'KITCHEN',
+                   'PAPAROTI', 'PIZZERIA', 'PRADO', 'DESSERT', 'RED ROBIN', 'BAKER', 'STEAMWORKS', 'SUPERBABA', 'PUB',
+                   'ROCK COD', 'TACO', 'TRACTOR', 'TROLLS', 'GATE', 'WHITE SPOT', 'BREWING', 'DOORDASH', 'WINERY', 'BBQ',
+                   'GASTRONOMIA', 'ITALLIA', 'ITALY'],
+  'Education' => ['CANADIAN FLIGHT CENTRE', 'LEETCODE', 'UDEMY'],
+  'Home Improvement' => ['FURNITURE'],
+  'Healthcare' => ['HEALTH', 'TESTING'],
+  'Transport' => ['DRIVING FORCE'],
+  'Auto Maintenance' => ['OK TIRE', 'NISSAN'],
+  'Hotel' => ['HOTEL'],
+  'Entertainment' => ['EVENT', 'MALAHAT', 'KEYSTONE GLOBAL SERVICE BURNABY', 'CRAVE'],
+  'Parking' => ['CITY OF OLYMPIA']
+}.freeze
