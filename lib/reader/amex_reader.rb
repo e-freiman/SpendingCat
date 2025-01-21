@@ -9,9 +9,6 @@ module Reader
     attr_reader :input_items
 
     def initialize(filename)
-
-      category_map = read_category_map("#{Pathname.new(filename).dirname.to_s}/category_map.xls")
-
       workbook = Roo::Spreadsheet.open filename
       sheet_name = workbook.sheets[0]
       sheet = workbook.sheet(sheet_name)
@@ -26,7 +23,7 @@ module Reader
         date = Date.strptime(row[0], '%d %b %Y')
         description = row[2]
         amount = row[4].tr('$','').tr(',','').to_f
-        category = category_map[row[8]]
+        category = row[8]
         next if amount < 0
 
         input_item = InputItem.new(date, description, amount, category)
@@ -36,22 +33,6 @@ module Reader
 
         @input_items << input_item
       end
-    end
-
-    private
-
-    def read_category_map(filename)
-      workbook = Roo::Spreadsheet.open filename
-      sheet_name = workbook.sheets[0]
-      sheet = workbook.sheet(sheet_name)
-      sheet.parse(clean: true)
-
-      category_map = {}
-      @input_items = []
-      sheet.each do |row|
-        category_map[row[0]] = row[2]
-      end
-      category_map
     end
   end
 end

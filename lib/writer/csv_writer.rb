@@ -5,16 +5,12 @@ module Writer
     end
 
     def write(filename, console = false)
-      Dir.mkdir('output') unless Dir.exists?('output')
+      Dir.mkdir('output') unless Dir.exist?('output')
       CSV.open(filename, 'wb') do |csv|
         @output_items.each do |output_item|
-          puts output_item if console
-          out_arr = if output_item.aggregated
-                      [output_item.name, output_item.amount].concat(output_item.notes)
-                    else
-                      ['',output_item.date, output_item.name, output_item.amount].concat(output_item.notes)
-                    end
-          csv << out_arr
+          arr = [output_item.name, sprintf("$%.0f", output_item.amount)].concat(output_item.notes)
+          puts arr.join("\t") if console
+          csv << arr
         end
       end
     end

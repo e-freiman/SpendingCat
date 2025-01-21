@@ -1,18 +1,15 @@
 module Writer
   class OutputItem
-    attr_reader :date, :name, :amount, :notes
-    attr_accessor :aggregated
+    attr_reader :name, :amount, :notes
 
-    def initialize(date, name, amount, notes = [])
-      @date = date
+    def initialize(name, amount, notes = [])
       @name = name
       @amount = amount
-      @aggregated = false
       @notes = notes
     end
 
     def to_s
-      "#{name}\t#{amount}"
+      "#{name}\t#{amount}".join(no)
     end
   end
 end
